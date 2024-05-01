@@ -22,3 +22,18 @@ Follow these steps to build and run the application using CMake:
 ```bash
 git clone https://github.com/yourusername/image-fusion-app.git
 cd image-fusion-app
+```
+
+2. Create a build directory and navigate to it:
+```
+mkdir build
+cd build
+```
+3. Configure the build with CMake:
+```
+cmake ..
+```
+4. Build the application:
+```
+cmake --build .
+```
