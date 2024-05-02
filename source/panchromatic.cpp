@@ -45,36 +45,6 @@ Mat weightedMean(const Mat& rgb, const Mat& pan, float rgbWeight, float panWeigh
     return result;
 }
 
-Mat color_codes(const Mat& image, int code) {
-    int rows = image.rows;
-    int cols = image.cols;
-
-    std::vector<Mat> channels(3);
-    cv::split(image, channels);
-    // red
-    if (code == 1)
-    {
-        channels[1] = Mat::zeros(rows, cols, channels[1].type());
-        channels[2] = Mat::zeros(rows, cols, channels[2].type());
-    }
-    // green
-    else if (code == 2)
-    {
-        channels[0] = Mat::zeros(rows, cols, channels[0].type());
-        channels[2] = Mat::zeros(rows, cols, channels[2].type());
-    }
-    // blue
-    else if (code == 3)
-    {
-        channels[0] = Mat::zeros(rows, cols, channels[0].type());
-        channels[1] = Mat::zeros(rows, cols, channels[1].type());
-    }
-    cv::Mat color;
-    cv::merge(channels, color);
-
-    return color;
-}
-
 Mat weightedBrovey(const Mat& rgb, const Mat& pan, double redWeight, double greenWeight, double blueWeight, double infraredWeight) {
 
     // Check if the dimensions of rgb and pan match
