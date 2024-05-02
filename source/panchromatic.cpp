@@ -33,7 +33,7 @@ Mat weightedMean(const Mat& rgb, const Mat& pan, float rgbWeight, float panWeigh
     rgb.convertTo(rgbFloat, CV_32F);
     pan.convertTo(panFloat, CV_32F);
 
-    resize(panFloat, panFloat, rgbFloat.size());
+    resize(rgbFloat, rgbFloat, panFloat.size());
 
     Mat weightedRgb = rgbWeight * rgbFloat;
     Mat weightedPan = panWeight * panFloat;
