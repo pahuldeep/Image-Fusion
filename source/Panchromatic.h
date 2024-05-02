@@ -7,6 +7,11 @@
 using namespace cv;
 
 Mat QImageToMat(const QImage &image);
-Mat ihsPansharpen(const Mat& rgb, const Mat& pan, double weight);
+
+Mat weightedIHS(const Mat& rgb, const Mat& pan, double weight);
+Mat weightedMean(const Mat& rgb, const Mat& pan, float rgbWeight, float panWeight);
+
+Mat weightedBrovey(const Mat& rgb, const Mat& pan, double redWeight, double greenWeight, double blueWeight, double infraredWeight);
+Mat weightedEsri(const Mat& rgb, const Mat& pan, double redWeight, double greenWeight, double blueWeight, double infraredWeight);
 
 #endif // PANCHROMATIC_H

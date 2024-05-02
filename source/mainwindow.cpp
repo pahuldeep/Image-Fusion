@@ -114,36 +114,6 @@ void MainWindow::zoomView(QGraphicsView* view, qreal scaleFactor)
     }
 }
 
-// void MainWindow::on_process_clicked()
-// {
-//     if (targetFilePath.isEmpty() || sourceFilePath.isEmpty()){
-//         QMessageBox::information(this, "Information", "Error, Missing file!");
-//     }
-
-//     QPixmap source(sourceFilePath);
-//     QImage image_source = source.toImage().convertToFormat(QImage::Format_RGB888);
-
-//     QPixmap target(targetFilePath);
-//     QImage image_target = target.toImage().convertToFormat(QImage::Format_RGB888);
-
-
-//     Mat sourceMat = cv::Mat(image_source.height(), image_source.width(), CV_8UC3, const_cast<uchar*>(image_source.bits()), image_source.bytesPerLine());
-//     Mat targetMat = cv::Mat(image_target.height(), image_target.width(), CV_8UC3, const_cast<uchar*>(image_target.bits()), image_target.bytesPerLine());
-
-
-//     // Get the current value of the slider
-//     double weight = static_cast<double>(ui->weights->value()) / 100.0;
-
-//     QString weightString = QString::number(weight);
-//     ui->percent->setText("Weight: " + weightString);
-
-//     // process source/target and save into output
-//     Mat output = ihsPansharpen(sourceMat, targetMat, weight);
-
-//     QImage image_edited = QImage(output.data, output.cols, output.rows, output.step, QImage::Format_RGB888);
-//     showImage(image_edited, ui->outputView, outputImageScene);
-// }
-
 
 void MainWindow::on_process_clicked()
 {
@@ -162,28 +132,35 @@ void MainWindow::on_process_clicked()
     Mat targetMat = cv::Mat(image_target.height(), image_target.width(), CV_8UC3, const_cast<uchar*>(image_target.bits()), image_target.bytesPerLine());
 
     // Get the current value of the slider
-    double weight = static_cast<double>(ui->weights->value()) / 100.0;
+    double weight_1 = static_cast<double>(ui->weight_1->value()) / 100.0;
+    double weight_2 = static_cast<double>(ui->weight_2->value()) / 100.0;
+    double weight_3 = static_cast<double>(ui->weight_3->value()) / 100.0;
+    double weight_4 = static_cast<double>(ui->weight_4->value()) / 100.0;
 
-    QString weightString = QString::number(weight);
-    ui->percent->setText("Weight: " + weightString);
+    QString weightString1 = QString::number(weight_1);
+    QString weightString2 = QString::number(weight_2);
+    QString weightString3 = QString::number(weight_3);
+    QString weightString4 = QString::number(weight_4);
+
+    ui->percent_1->setText("Weight: " + weightString1);
+    ui->percent_2->setText("Weight: " + weightString2);
+    ui->percent_3->setText("Weight: " + weightString3);
+    ui->percent_4->setText("Weight: " + weightString4);
 
     // Determine which operation to perform based on the selected radio button
     Mat output;
     if (ui->IHS->isChecked()) {
-        output = ihsPansharpen(sourceMat, targetMat, weight);
-    }
-    else if (ui->BROVEY->isChecked()) {
-        qDebug() << "PERFORM BROVEY";
-
+        output = weightedIHS(sourceMat, targetMat, weight_1);
     }
     else if (ui->MEAN->isChecked()) {
-        qDebug() << "PERFORM MEAN";
-
+        output = weightedMean(sourceMat, targetMat, weight_1, weight_2);
+    }
+    else if (ui->BROVEY->isChecked()) {
+        output = weightedBrovey(sourceMat, targetMat, weight_1, weight_2, weight_3, weight_4);
     }
     else if (ui->ESRI->isChecked()){
         qDebug() << "PERFORM ESRI";
     }
-
     else {
         QMessageBox::information(this, "Information", "Please select a fusion method.");
         return;
@@ -213,7 +190,6 @@ void MainWindow::on_save_clicked()
     }
     QMessageBox::information(this, "Information", "Error, Bad Format!");
 }
-
 
 
 void MainWindow::setupShortcuts(){

@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 
-
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 
@@ -14,7 +13,6 @@
 QT_BEGIN_NAMESPACE
 namespace Ui {class MainWindow;}
 QT_END_NAMESPACE
-
 
 class MainWindow : public QMainWindow
 {
@@ -38,7 +36,6 @@ private:
     QGraphicsView* getCurrentView() const;
 
 
-
     void showImage(const QString &path, QGraphicsView *view, QGraphicsScene *scene);
     void showImage(const QImage& image, QGraphicsView* view, QGraphicsScene* scene);
 
@@ -56,9 +53,6 @@ private:
     // QString currentImagePath;
     QString targetFilePath;
     QString sourceFilePath;
-
-    QGraphicsPixmapItem *currentImage;
-
 
 };
 #endif // MAINWINDOW_H

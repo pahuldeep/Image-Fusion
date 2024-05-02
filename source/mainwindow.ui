@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>843</width>
-    <height>870</height>
+    <width>840</width>
+    <height>872</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -62,32 +62,21 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QSlider" name="weights">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="percent">
-         <property name="text">
-          <string>Weight: 0.00</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QPushButton" name="process">
-       <property name="text">
-        <string>Process</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <layout class="QHBoxLayout" name="processLayout">
+       <item>
+        <widget class="QRadioButton" name="IHS">
+         <property name="text">
+          <string>IHS</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="MEAN">
+         <property name="text">
+          <string>Mean</string>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QRadioButton" name="BROVEY">
          <property name="text">
@@ -102,28 +91,85 @@
          </property>
         </widget>
        </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="process">
+       <property name="text">
+        <string>Process</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QRadioButton" name="MEAN">
-         <property name="text">
-          <string>Mean</string>
-         </property>
-        </widget>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="1" column="1">
+          <widget class="QLabel" name="percent_3">
+           <property name="text">
+            <string>Weight: 0.00</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QSlider" name="weight_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QSlider" name="weight_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="percent_2">
+           <property name="text">
+            <string>Weight: 0.00</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="percent_4">
+           <property name="text">
+            <string>Weight: 0.00</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QSlider" name="weight_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QSlider" name="weight_1">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="percent_1">
+           <property name="text">
+            <string>Weight: 0.00</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QRadioButton" name="IHS">
-         <property name="text">
-          <string>IHS</string>
+        <widget class="QGraphicsView" name="outputView">
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
          </property>
         </widget>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QGraphicsView" name="outputView">
-       <property name="sizeAdjustPolicy">
-        <enum>QAbstractScrollArea::AdjustIgnored</enum>
-       </property>
-      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="save">
@@ -140,7 +186,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>843</width>
+     <width>840</width>
      <height>25</height>
     </rect>
    </property>
