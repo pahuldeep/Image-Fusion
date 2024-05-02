@@ -2,7 +2,12 @@
 
 This application performs image fusion using various methods. 
 
-currently only one method i have updated others i will update later.
+I will update later.
+
+- IHS method (working)
+- MEAN method (working)
+- BROVEY method (there is a bug debug later.)
+- ESRI method (update later)
 
 ## Dependencies
 
@@ -10,7 +15,7 @@ currently only one method i have updated others i will update later.
 
 ## Functionalities
 
-- **Image Fusion**: The application allows you to fuse two images using different fusion methods, such as IHS and Brovey.
+- **Image Fusion**: The application allows you to fuse different bands of images using different fusion methods, such as IHS and Brovey.
 - **Save Fused Image**: You can save the fused image to your filesystem.
 
 ## Build Instructions
