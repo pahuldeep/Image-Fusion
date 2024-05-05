@@ -2,12 +2,12 @@
 
 This application performs image fusion using various methods. 
 
-I will update later.
+THIS is the version 1.2.0 with opencv integrated I will update later features later.
 
-- IHS method (working)
-- MEAN method (working)
-- BROVEY method (there is a bug debug later.)
-- ESRI method (update later)
+- IHS method (OpenCV working)
+- MEAN method (OpenCV working)
+- BROVEY method (there is a bug in QpenCV brovey method I will debug later.)
+- ESRI method (not yet implemented update later)
 
 ## Dependencies
 - QT: Ypu need to have QT installed to build and run this application.
