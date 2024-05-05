@@ -2,7 +2,7 @@
 
 This application performs image fusion using various methods. 
 
-THIS is the version 1.2.0 with opencv integrated I will update later features later.
+THIS is the version 1.2.0 with opencv integrated I will update features later.
 
 - IHS method (OpenCV working)
 - MEAN method (OpenCV working)
@@ -10,7 +10,7 @@ THIS is the version 1.2.0 with opencv integrated I will update later features la
 - ESRI method (not yet implemented update later)
 
 ## Dependencies
-- QT: Ypu need to have QT installed to build and run this application.
+- QT: You need to have QT installed to build and run this application.
 - OpenCV: You need to have OpenCV installed to build and run this application.
 
 ## Functionalities
