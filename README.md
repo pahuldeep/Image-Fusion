@@ -10,7 +10,7 @@ I will update later.
 - ESRI method (update later)
 
 ## Dependencies
-
+- QT: Ypu need to have QT installed to build and run this application.
 - OpenCV: You need to have OpenCV installed to build and run this application.
 
 ## Functionalities
