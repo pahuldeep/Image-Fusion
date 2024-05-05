@@ -43,4 +43,5 @@ cmake ..
 cmake --build .
 ```
 
+![modified_000007](https://github.com/pahuldeep/ImageFusion/assets/52893813/691eb615-a13c-4716-a525-6e8b75d4a81d)
 
