@@ -2,12 +2,14 @@
 
 This application performs image fusion using various methods. 
 
-NOTE: this version is 1.2.0 with opencv integrated, but version 1.0.0 available for free on techOpswalk.
+NOTE: this version is 1.2.0 with opencv integrated
 
 - IHS method (OpenCV working)
 - MEAN method (OpenCV working)
 - BROVEY method (there is a bug in QpenCV brovey method I will debug later.)
 - ESRI method (not yet implemented update later)
+
+NOTE: version 1.0.0 (working all modules) available for free on techOpswalk.
 
 ## Dependencies
 - QT: You need to have QT installed to build and run this application.
