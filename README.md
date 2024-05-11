@@ -2,7 +2,7 @@
 
 This application performs image fusion using various methods. 
 
-THIS is the version 1.2.0 with opencv integrated I will update features later.
+THIS is the version 1.2.0 with opencv integrated, but version 1.0.0 available for free on techOpswalk.
 
 - IHS method (OpenCV working)
 - MEAN method (OpenCV working)
