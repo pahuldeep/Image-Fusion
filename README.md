@@ -10,7 +10,7 @@ NOTE: this version is 1.2.0 with opencv integrated
 - ESRI method (not yet implemented update later)
 
 NOTE: version 1.0.0 (working all modules) available for free on techOpswalk.
-[Releases](https://github.com/your-username/image-fusion-qt/releases](https://github.com/techopswalk/Image-Fusion-Application/releases/tag/Image-Fusion)) page.
+[Releases](https://github.com/techopswalk/Image-Fusion-Application/releases/tag/Image-Fusion) page.
 
 ## Dependencies
 - QT: You need to have QT installed to build and run this application.
